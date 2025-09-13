@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full hover:bg-gray-400 dark:hover:bg-gray-500;
+}
+
+/* Animations */
+@keyframes chip-drop {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-chip-drop {
+  animation: chip-drop 0.5s ease-out forwards;
+}
+
+/* Card flip animation */
+.card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 0.75rem;
+  @apply bg-white dark:bg-card-dark shadow-md flex items-center justify-center;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  @apply bg-gradient-to-br from-primary to-primary-dark text-white;
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-primary-dark text-white focus:ring-primary/50;
+}
+
+.btn-secondary {
+  @apply bg-secondary hover:bg-secondary-dark text-white focus:ring-secondary/50;
+}
+
+.btn-outline {
+  @apply border-2 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-gray-300 dark:focus:ring-gray-500;
+}
+
+/* Chip styles */
+.chip {
+  @apply rounded-full w-12 h-12 flex items-center justify-center text-white font-bold shadow-md transition-transform duration-200 hover:scale-110 cursor-pointer;
+}
+
+.chip-red { @apply bg-chip-red; }
+.chip-blue { @apply bg-chip-blue; }
+.chip-green { @apply bg-chip-green; }
+.chip-black { @apply bg-chip-black; }
+
+/* Custom animations */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Custom utility classes */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+/* Custom scrollbar for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9CA3AF #E5E7EB;
+}
+
+.dark * {
+  scrollbar-color: #4B5563 #1F2937;
+}
