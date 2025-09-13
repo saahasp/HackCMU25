@@ -1,7 +1,5 @@
 # GradeJack - Gamified Grade Tracker
 
-![GradeJack Banner](https://i.imgur.com/your-banner-image.png)
-
 GradeJack is an interactive web application that transforms grade tracking into an engaging experience. Students can track their grades, earn tokens for academic achievements, and redeem them for prizes, all while enjoying a fun blackjack game.
 
 ## 🎮 Features
@@ -60,7 +58,6 @@ GradeJack is an interactive web application that transforms grade tracking into 
 3. Create a `.env` file in the root directory and add your environment variables:
    ```env
    VITE_API_URL=http://localhost:5000/api
-   # Add other environment variables as needed
    ```
 
 4. Start the development server
@@ -70,7 +67,7 @@ GradeJack is an interactive web application that transforms grade tracking into 
    yarn dev
    ```
 
-5. Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+5. Open [http://localhost:5173](http://localhost:3000) to view it in your browser.
 
 ## 📦 Scripts
 
@@ -112,19 +109,10 @@ Contributions are what make the open-source community such an amazing place to l
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## 👏 Acknowledgments
-
-- [CMU](https://www.cmu.edu/) - For the inspiration
-- [Vite](https://vitejs.dev/) - For the amazing build tool
-- [Tailwind CSS](https://tailwindcss.com/) - For the awesome utility classes
-- [Framer Motion](https://www.framer.com/motion/) - For smooth animations
-
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
-
-Project Link: [https://github.com/your-username/gradejack](https://github.com/your-username/gradejack)
+Your Name - sparasa@andrew.cmu.edu
 
 ---
 
-Made with ❤️ by [Your Name]
+Made by Saahas Parasa
